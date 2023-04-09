@@ -1,6 +1,6 @@
 Integation jaspersoft REST API to php application to manage report in all format as jasper provided like pdf, docx and xlsx etc. I tried to make it easier to integration with jasper soft.   
  
-## Install it to the appliation through composer   
+## Install it to the application through composer   
 `composer install <package name>`
 
 ### Laravel specific configuration 
