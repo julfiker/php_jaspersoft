@@ -4,10 +4,10 @@ Integation jaspersoft REST API to php application to manage report in all format
 `composer install <package name>`
 
 ### Laravel specific configuration 
-1. First add service provider as below in to the config/app   
+ **1. First add service provider as below in to the config/app**   
 `Julfiker\Jasper\JasperReportServiceProvider::class,`  
    
-2. To publishing config   
+ **2. To publishing config**   
 `php artisan vendor:publish --provider="Julfiker\Jasper\JasperReportServiceProvider"`
 
 
