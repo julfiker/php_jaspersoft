@@ -19,11 +19,7 @@ class JasperReportPublisherController extends Controller
      */
     public function __construct(JasperReport $jasperReport)
     {
-        $this->jasperReport = $jasperReport
-            ->setServerUrl(config('jasper.server_url'))
-            ->setUsername(config('jasper.username'))
-            ->setPassword(config('jasper.password'))
-            ->make();
+        $this->jasperReport = $jasperReport;
 
     }
 
@@ -34,14 +30,20 @@ class JasperReportPublisherController extends Controller
      * @return mixed
      */
     public function render($title = "report",Request $request) {
+        /** configuring with jasper credentials */
+        $this->jasperReport->setServerUrl(config('jasper.server_url'))
+            ->setUsername(config('jasper.username'))
+            ->setPassword(config('jasper.password'))
+            ->make();
+
         $path = $request->get('path');
         $type= $request->get('type');
-        $this->fileName = $request->get('filename')??'report'.".".$type;
+        $this->fileName = $request->get('name')??'report'.".".$type;
 
         $params = $request->all();
         unset($params['type']);
         unset($params['path']);
-        unset($params['filename']);
+        unset($params['name']);
         try {
             $reportContent = $this->jasperReport
                 ->setPath($path)

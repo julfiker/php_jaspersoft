@@ -24,7 +24,7 @@ function render_report($path, $type = "pdf", $params = []) {
             ->setParams($params)
             ->generate();
 
-        $fileName = $params['filename'] ?? 'report' . "." . $type;
+        $fileName = $params['name'] ?? 'report' . "." . $type;
         $controller = app(\Julfiker\Jasper\JasperReportPublisherController::class);
         $controller->fileName = $fileName;
 
