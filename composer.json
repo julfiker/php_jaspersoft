@@ -1,5 +1,5 @@
 {
-    "name": "julfiker/laravel-jaspersoft",
+    "name": "julfiker/php-jaspersoft",
     "description": "Jasper report base on jaspersoft rest server in to the Laravel or any other php based application.",
     "license": "MIT",
     "authors": [
