@@ -1,16 +1,17 @@
 {
     "name": "julfiker/laravel-jaspersoft",
-    "description": "Jasper report base on jaspersoft rest server in to the Laravel.",
-    "require": {
-        "php": ">=5.5.9",
-        "jaspersoft/rest-client": "^2.0"
-    },
+    "description": "Jasper report base on jaspersoft rest server in to the Laravel or any other php based application.",
+    "license": "MIT",
     "authors": [
         {
             "name": "Julfiker",
             "email": "mail.julfiker@gmail.com"
         }
     ],
+    "require": {
+        "php": ">= 7.0.*",
+        "jaspersoft/rest-client": "^2.0"
+    },
     "autoload": {
         "psr-4": {
             "Julfiker\\Jasper\\": "src/"

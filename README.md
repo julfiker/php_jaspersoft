@@ -11,3 +11,4 @@ Integation jaspersoft REST API to php application to manage report in all format
 `php artisan vendor:publish --provider="Julfiker\Jasper\JasperReportServiceProvider"`
 
 
+ echo route('julfiker.jasper.report.render', ['path' => "/reports/IDRA_REPORTS/InsuranceReport/CARatingList", 'type' => 'pdf', "name" => "bi_dashboard", "param" => 1]);
