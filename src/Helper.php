@@ -5,11 +5,12 @@
  *
  * @param $path
  * @param string $type
+ * @param string $name
  * @param array $params
  * @return mixed
  * @throws Exception
  */
-function render_report($path, $type = "pdf", $params = []) {
+function render_report($path, $type = "pdf", $name = "report", $params = []) {
     try {
 
         $manager = app(\Julfiker\Jasper\Manager\JasperReport::class)
@@ -24,7 +25,7 @@ function render_report($path, $type = "pdf", $params = []) {
             ->setParams($params)
             ->generate();
 
-        $fileName = $params['name'] ?? 'report' . "." . $type;
+        $fileName = $name ?? 'report' . "." . $type;
         $controller = app(\Julfiker\Jasper\JasperReportPublisherController::class);
         $controller->fileName = $fileName;
 
