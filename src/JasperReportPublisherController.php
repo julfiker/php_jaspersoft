@@ -38,7 +38,11 @@ class JasperReportPublisherController extends Controller
 
         $path = $request->get('path');
         $type= $request->get('type');
-        $this->fileName = $request->get('name')??'report'.".".$type;
+
+        //Original Code: $this->fileName = $request->get('name')??'report'.".".$type;
+        // bug: if name is passed extension will not concat.
+        // fix:
+        $this->fileName = $request->get('name')?$request->get('name').".".$type:'report'.".".$type;
 
         $params = $request->all();
         unset($params['type']);
