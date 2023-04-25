@@ -23,6 +23,7 @@ function render_report($path, $type = "pdf", $name = "report", $params = []) {
             ->setPath($path)
             ->setType($type)
             ->setParams($params)
+            ->setRequestTimeout(config('request_time_out'))
             ->generate();
 
         $fileName = $name ?? 'report' . "." . $type;

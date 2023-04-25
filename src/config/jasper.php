@@ -15,5 +15,5 @@ return [
     /*
      * Default 30 seconds as jasper soft client provided
      */
-    'default_time_out' => env('JASPER_SERVER_DEFAULT_TIMEOUT', 30)
+    'request_time_out' => env('JASPER_SERVER_REQUEST_TIMEOUT', 30)
 ];

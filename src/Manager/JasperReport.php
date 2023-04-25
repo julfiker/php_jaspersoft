@@ -167,4 +167,16 @@ class  JasperReport
 
         return $this;
     }
+
+    /**
+     * Set request timeout for curl request to get report binary from jasper server
+     *
+     * @param $seconds
+     * @return $this
+     */
+    public function setRequestTimeout($seconds) {
+        $this->client->setRequestTimeout($seconds);
+
+        return $this;
+    }
 }

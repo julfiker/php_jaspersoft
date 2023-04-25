@@ -49,6 +49,7 @@ class JasperReportPublisherController extends Controller
                 ->setPath($path)
                 ->setType($type)
                 ->setParams($params)
+                ->setRequestTimeout(config('request_time_out'))
                 ->generate();
 
             if ($type == 'pdf')
