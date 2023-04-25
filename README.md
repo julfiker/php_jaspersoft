@@ -67,6 +67,7 @@ try {
         ->setPath("{JASPER_REPORT_PATH}")
         ->setType("pdf")
         ->setParams(["param1"=> 1, "param2" => 2])
+        ->setRequestTimeout(30)  #30 seconds
         ->generate();
   
   
