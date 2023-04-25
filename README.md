@@ -15,7 +15,8 @@ Integation jaspersoft REST API to php application to manage report in all format
 #### Jasper server credential configuration #######
 JASPER_SERVER_URL=http://127.0.0.1:8888/jasperserver
 JASPER_SERVER_USERNAME=jasperadmin
-JASPER_SERVER_PASSWORD=jasperadmin
+JASPER_SERVER_PASSWORD=jasperadmin  
+JASPER_SERVER_REQUEST_TIMEOUT=30
 ```
  
 ### Instruction to use in to the Laravel
