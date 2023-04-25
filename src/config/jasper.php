@@ -10,5 +10,10 @@ return [
      * Jasper server credential configuration
      */
     "username" => env('JASPER_SERVER_USERNAME', 'jasperadmin'),
-    "password" => env('JASPER_SERVER_PASSWORD', 'jasperadmin')
+    "password" => env('JASPER_SERVER_PASSWORD', 'jasperadmin'),
+
+    /*
+     * Default 30 seconds as jasper soft client provided
+     */
+    'default_time_out' => env('JASPER_SERVER_DEFAULT_TIMEOUT', 30)
 ];
