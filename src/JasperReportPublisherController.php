@@ -29,7 +29,7 @@ class JasperReportPublisherController extends Controller
      * @param Request $request
      * @return mixed
      */
-    public function render($title = "report",Request $request) {
+    public function render(Request $request, $title = "report") {
         /** configuring with jasper credentials */
         $this->jasperReport->setServerUrl(config('jasper.server_url'))
             ->setUsername(config('jasper.username'))
