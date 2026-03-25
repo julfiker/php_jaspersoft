@@ -41,10 +41,15 @@ class JasperReportPublisherController extends Controller
 
         $this->fileName = $request->get('name')?$request->get('name').".".$type:'report'.".".$type;
 
-        $params = $request->all();
+        /***Following statement handles multiselect/array value. Convert them into comma seperated single value. ***/
+        $params = collect($request->all())->map(function ($item) {
+            return is_array($item) ? implode(',', $item) : $item;
+        })->toArray();
+
         unset($params['type']);
         unset($params['path']);
         unset($params['name']);
+
         try {
             $reportContent = $this->jasperReport
                 ->setPath($path)
